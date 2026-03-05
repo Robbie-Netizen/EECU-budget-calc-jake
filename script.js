@@ -22,7 +22,7 @@ income_input.addEventListener('input', () => {
     estimated.children.item(1).textContent = (income / 2).toFixed(2);
     estimated.children.item(2).textContent = (income * 0.3).toFixed(2);
     estimated.children.item(3).textContent = (income * 0.2).toFixed(2);
-    netIncome.textContent = +income_input.value;
+    netIncome.textContent = `$${Math.floor((Number(income_input.value))).toFixed(2)}`;
 });
 
 let spent_on_needs = 0;

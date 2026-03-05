@@ -15,7 +15,7 @@ nav {
     border-bottom: 2px solid black;
     margin-bottom: 2rem;
 
-    &::before {}
+    /* For the logo*/
 }
 
 button:hover {
@@ -35,7 +35,11 @@ button:hover {
         padding-bottom: 0.25rem;
         font-family: var(--font-main);
         border-bottom: 1px solid black;
+        font-size: 25px;
+    }
 
+    & #netIncome {
+        font-size: 20px;
     }
 }
 
@@ -69,11 +73,22 @@ nav ul li {
     padding: 1rem 2rem;
     /* May need to change to fix dimensions of whatever words apepar */
     border-radius: 10px;
+    /* Doesn't work */
+    &.logo > a {
+        width: max-content;
+        height: max-content;
+        background-image: url(images\logo.png);
+        background-repeat: no-repeat;
+    }
 }
 
 #contentContainer {
+    justify-self: center;
+    align-self: center;
     border: 2px solid black;
     border-radius: 20px;
+    margin: 1em;
+    width: fit-content;
 }
 
 #interactables {
@@ -89,7 +104,7 @@ nav ul li {
 .stepContainer {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 3em;
     font-family: var(--font-heading);
     /* font family doens't work pls fix it 😁 */
     padding: 10px;
@@ -103,6 +118,12 @@ nav ul li {
         margin: 1rem;
 
         font-size: 20px;
+
+        &:hover {
+            transition: var(--transition);
+            background-color: var(--primary-blue);
+            color: var(--primary-white);
+        }
 
         &::after {
             content: "";
@@ -150,7 +171,7 @@ input {
     border-radius: 10px;
     padding: 0.5rem;
     height: 40px;
-    width: minmax(200px, fit-content);
+    width: 250px;
     font-family: var(--font-main);
     font-size: 18px;
     color: black;
